@@ -26,7 +26,6 @@ def get_all():
 def get_by_pk(pk):
     """
     Функция, которая вернет кандидата по pk.
-    """
     :param pk: pk.
     :return: Кандидат по pk.
     """
