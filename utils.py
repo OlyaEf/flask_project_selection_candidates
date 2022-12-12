@@ -26,8 +26,8 @@ def get_all():
 def get_by_pk(pk):
     """
     Функция, которая вернет кандидата по pk.
-    :param pk
-    :return: кандидата по pk
+    :param pk.
+    :return: кандидата по pk.
     """
     for candidate in get_all():
         if candidate['pk'] == pk:
@@ -37,9 +37,9 @@ def get_by_pk(pk):
 
 def get_by_skill(skill_name):
     """
-    которая вернет кандидатов по навыку
-    :param skill_name:
-    :return: кандидата по скилам
+    Функция, которая вернет кандидатов по навыку.
+    :param skill_name: Наименование навыка.
+    :return: Список кандидатов по навыкам.
     """
     candidates = []
     for candidate in load_candidates():
