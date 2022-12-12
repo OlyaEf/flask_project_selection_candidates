@@ -17,7 +17,7 @@ def load_candidates():
 def get_all():
     """
     Функция, которая покажет всех кандидатов.
-    :return: вернет список словарей всех кандидатов.
+    :return: Вернет список словарей всех кандидатов.
     """
     data = load_candidates()
     return data
@@ -33,3 +33,16 @@ def get_by_pk(pk):
         if candidate['pk'] == pk:
             return candidate
     return
+
+
+def get_by_skill(skill_name):
+    """
+    Функция, которая вернет кандидатов по навыку.
+    :param skill_name: Наименование навыка.
+    :return: Список кандидатов по скиллам.
+    """
+    candidates = []
+    for candidate in load_candidates():
+        if skill_name.lower() in candidate['skills'].lower().split(', '):
+            candidates.append(candidate)
+    return candidates
